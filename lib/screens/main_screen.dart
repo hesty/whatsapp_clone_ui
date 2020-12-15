@@ -23,20 +23,23 @@ class _MainScreenState extends State<MainScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:buildAppBar(),
+      appBar: buildAppBar(),
       body: TabBarView(
         controller: tabController,
         children: [
-         new CameraScreen(),
+          new CameraScreen(),
           new ChatsScreen(),
           new StatusScreen(),
           new CallsScreen()
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.message,color: Colors.white,),
+        child: Icon(
+          Icons.message,
+          color: Colors.white,
+        ),
         backgroundColor: Color(0xff25D366),
-        onPressed: (){
+        onPressed: () {
           print("test");
         },
       ),
@@ -49,12 +52,18 @@ class _MainScreenState extends State<MainScreen>
       elevation: 0.7,
       actions: [
         IconButton(
-          icon: Icon(Icons.search,color: Colors.white,),
-          onPressed: (){},
+          icon: Icon(
+            Icons.search,
+            color: Colors.white,
+          ),
+          onPressed: () {},
         ),
         IconButton(
-          icon: Icon(Icons.more_vert,color: Colors.white,),
-          onPressed: (){},
+          icon: Icon(
+            Icons.more_vert,
+            color: Colors.white,
+          ),
+          onPressed: () {},
         )
       ],
       bottom: TabBar(
